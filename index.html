@@ -1,0 +1,177 @@
+
+<!-- this is a comment -->
+<!-- a comment is a thing that the computer ignores -->
+<!-- a comment is a thing for humans to read -->
+<!-- a comment helps humans understand the code written for computers -->
+<!-- human, please read these comments -->
+
+<!-- all the stuff below, until title, is standard things you can pretty much just copy and paste -->
+<!-- without worrying too much about what it means-->
+
+<!DOCTYPE html> <!-- this tells the computer that the document type is html -->
+<!-- html is the language that web browsers speak -->
+<!-- web browsers (Chrome, Safari, Firefox) read html files (text) and make them into fabulous websites with images, videos, etc. -->
+<!-- our code says to the browser: "please interpret all of this stuff according to the html standards that we have agreed on globally" -->
+
+<html lang="en"> 
+    <!-- this "html tag": <html> tells the browser, the html code begins now -->
+    <!-- lang="en" tells screen readers that the text on this webpage is in English -->
+
+  <head> 
+    <!-- this is the website "header", which includes metadata about the website, such as: -->
+
+    <meta charset="UTF-8">
+    <!-- charset = "character set", this tells the browser to display all possible characters correctly on the page -->
+    <!-- if not determined, results in gibberish on screen, eg. "hääyö" becomes "hÃ⁠¤Ã⁠¤yÃ⁠¶" -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- this tells the browser to adjust the content depending on the size of the "viewport" -->
+    <!-- the viewport is basically the user's screen -->
+    <!-- nowadays people will navigate websites on their phones or computers -->
+    <!-- so it's important to adjust the website content accordingly -->
+
+    <title>how to make a website</title>
+    <!-- now the fun begins! -->
+    <!-- whatever you write inside the title tag, ie. between <title></title> -->
+    <!-- will appeare on the tab in your browser!-->
+
+    <link rel="stylesheet" href="css/style.css">
+    <!-- here we link to a CSS "stylesheet", in which we can define fonts, colors, font size, etc. -->
+    <!-- we can also define these things on a need-by-need basis, "inline" in the html code -->
+    <!-- but sometimes, and often, it makes sense to define things for the whole website -->
+
+    <!-- I am going to write some CSS here for my document: -->	
+    <style>
+        body {background-color: rgb(255, 189, 241);}
+        p {font-size: 24px;}
+      </style>
+
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <!-- here we define the "favicon", what a strange name -->
+    <!-- this is one of my favorite parts about making a website -->
+    <!-- you create a 32x32 PIXEL or 64x64 PIXEL image (VERY TINY) -->
+    <!-- and then this image is displayed as a tiny icon in the tab, next to the website title -->
+
+  </head>
+  <!-- this, backslash before the tag name </>, tells the browser: "end of all the metadata things I wanted to tell you" -->
+
+  <body>
+    <!-- here begins the BODY of a website, this is all the CONTENT, the STUFF of the website, the meat and bones. -->
+    <!-- in our case: images and text -->
+
+        <p>
+        <!-- this is a "p" tag, p is for "paragraph" -->
+        <!-- any text we write will be displayed on the website -->
+            This is a website about how to make a website.
+        </p>
+        <!-- must remember to close the p tag -->	
+
+        <p>please click option+command+I (mac) or F12 or Control+Shift+I (windows/linux) on chrome for developer tools so you can read the source code.</p>
+        
+        <hr>
+
+        <p>Go to <a target="_blank" href="https://github.com">GitHub.com</a>. Create an account - choose your username wisely.</p>
+        <p>Create a repository called username.github.io. Click on "Get started by ... uploading an existing file."</p>
+
+        <p>Go to <a target="_blank" href="https://github.com/trhi/website">https://github.com/trhi/website</a>. Click on the green <> code button -> download ZIP.</p>
+        <p>Unzip. Drag and drop the entire contents of the folder called "website-main" (includes two folders: img and work, as well as index.html) to the screen you have open for uploading files to your repository username.github.io</p>
+        <p>Wait a moment. Then navigate to username.github.io to see your website!</p>
+
+        <hr>
+
+        <p>Download <a target="_blank" href="https://code.visualstudio.com/">visual studio code</a>. Open the index.html file in VS code and edit it. Save. Press "run and debug" to view the file in the browser.</p>
+        
+        <hr>
+
+        <p>Two very basic things: how to write text and how to display an image.</p>
+        <p>p, lower case, is for paragraph, the paragraph tag, a p. It is pronounced the same as pea 🫛.</p>
+
+        <!-- now I will make small modifications to this "p"'s style: -->	
+        <p style="font-size: 50px;">This is how you increase the font size of a pea 🫛.</p>
+        <p style="color: seagreen;">This is how you add color to a pea 🫛.</p>
+        <p style="font-size:36px; color: deeppink;">This is how you increase the font size and the color of a pea 🫛.</p>
+        <p>This is how you <em>emphasize a pea</em> 🫛.</p>
+
+        <p>The more I repeat pea 🫛, the stranger it begins to sound 🔊.</p>
+
+        <hr>
+
+        <p>I will now add an <em>image</em>:</p>
+
+        <img style="width: 100%;" src="https://upload.wikimedia.org/wikipedia/commons/8/86/Apple-tree_blossoms_2017_G3.jpg"></img>
+        <!-- src tells the browser where to find the image -->
+        <!-- img/ means that it is in the img folder -->
+        <!-- and img1.jpg is the name of the file -->	
+        <!--make the image take up 100% of the width of the screen-->
+        <p>apple tree blossoms. A public domain image from wikimedia commons.</p>	
+
+        <p>I want the <em>image</em> to be small: 50% of the width of the screen.</p>
+        
+        <img style="width: 50%;" src="https://upload.wikimedia.org/wikipedia/commons/8/86/Apple-tree_blossoms_2017_G3.jpg"></img>
+        <p>apple tree blossoms. A public domain image from wikimedia commons.</p>		
+
+        <hr>
+
+        <p>Now I am going to create a div - a content division element. I am going to make a div that has all my images.</p>
+        
+        <p>Now I am going to place the div so that it is perfectly centered on my page:</p>
+        <div style="width: 80%; margin:auto;"> <!-- width: take up 80% of the html document width 
+          margin: calculate the margin size accordingly, automatically -->
+          <img style="width:100%;" src="https://upload.wikimedia.org/wikipedia/commons/8/86/Apple-tree_blossoms_2017_G3.jpg"></img> 
+          <!--and make the image width 100% of the width of the division element-->
+          <p>apple tree blossoms. A public domain image from wikimedia commons.</p>	
+
+          <p>Now I am going to add my own image. It is saved in a folder called img.</p>	
+
+          <p>! This image works like <em>a link</em>. Click on the image. It will take you to a webpage that tells more about the work:</p>  
+          <a target="_blank" href="work/img1.html"><img style="width:100%;" src="img/img1.jpg"></img></a>         
+          <!--and make the image width 100% of the width of the division element-->
+          <p><em>image of a sculpture by Veijo Rönkkönen</em>, photograph by Terhi Marttila</p>	
+        </div>
+
+        <hr>
+        <p>A list of websites written in html for you to explore. Copy and modify their source code:</p>
+        <!-- the "a" tag means "anchor" - confusing, right? In early days of html and the internet, it meant that the text inside
+        the tag was an anchor to another part of the html document, or to another page. 
+        
+        In the words of Tim Berners Lee, "inventor" of the internet:
+        "I used the term "anchor" for the the thing -- document or part of document -- a link starts or ends on" (post on 
+        X/Twitter on February 4th, 2020).
+
+        So I can write: Click <a>here</> to go to another site. If the user clicks on "here", it will take them to another site.
+
+        We tell the browser where to take the user by specifying the "href", the hypertext reference. This can be a website URL/address,
+        but it can also be other things, such as a link to another section of the same page we are already on.
+
+        I also specify: target="_blank;", this means that the link will open in a new browser tab.
+
+      -->
+
+
+      
+      <p style="font-size: 25px;">The <a target="_blank" href="https://info.cern.ch/hypertext/WWW/TheProject.html">first ever website</a> in the world.</p>
+      <p style="font-size: 25px;">(?) A very early artist portfolio template by <a target="_blank" href="">Christine Lastname</a></p>
+      <p style="font-size: 25px;"><a target="_blank" href="https://terhimarttila.com/">Terhi Marttila</a>. Reads like a CV, with links to works.</p>
+      <p style="font-size: 25px;"><a target="_blank" href="https://www.nenhures.net">Rafaela Nunes</a>. A beautiful, elegant image gallery.</p>
+      <p style="font-size: 25px;"><a target="_blank" href="https://lizz.website/">Lizz Thabet</a>. Different kinds of projects.</p>
+      <p style="font-size: 25px;"><a target="_blank" href="https://nickm.com/">Nick Montfort</a>. Words, links, straight to the point.</p>
+      <p style="font-size: 25px;"><a target="_blank" href="https://annaylin.com/100-days/">100 days of websites</a>. By Anna Y Lin.</p>
+
+      
+      
+      <p style="font-size: 25px;"><a target="_blank" href="https://thehtml.review/archive">A huge bunch of amazing websites by different artists</a>. Click on their name to access their website.</p> 
+
+      <hr>
+
+      <p>Ask <a target="_blank" href="https://chat.openai.com/">https://chat.openai.com/</a> (chatGPT) for help on how to write html.</p>
+      <p>Read the reference at <a target="_blank" href="https://developer.mozilla.org/">Mozilla developer network</a> for information on different html elements and their properties.</p>
+      <p>Look for advice on <a target="_blank" href="https://stackoverflow.com/">https://stackoverflow.com/</a>, a forum where people advise eachother.</p>
+      <p>Read about and study html on <a target="_blank" href="https://www.w3schools.com/">w3schools</a>.</p>
+      <p>Explore resources or take a free course on <a target="_blank" href="https://www.codecademy.com/">codecademy</a>.</p>
+      
+
+  </body>
+  <!-- again a backslash before the tag name, telling the browser that it's time to close the body, nothing more on this website -->
+
+  </html>
+<!-- and a last backslash, to tell the browser that the html file is now over and out -->
